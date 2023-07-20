@@ -7,7 +7,7 @@ use DarkPHP\HTTPMonster;
 $http = new HTTPMonster();
 
 $response = $http
-    ->Url('https://nahanabzar.ir')
+    ->Url('https://nahanabzar.ir/ai')
     ->Method('GET')
     ->Headers(
         array(

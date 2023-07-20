@@ -57,10 +57,10 @@ $status = $http->getStatus();
 
 ### Setting Default Options
 
-HTTPMonster sets default cURL options for the request. You can modify these defaults by calling the `setDefaults()` method:
+HTTPMonster sets default cURL options for the request. You can modify these defaults by calling the `Option()` method:
 
 ```php
-$http->setDefaults([
+$http->Option([
     CURLOPT_SSL_VERIFYHOST => 2,
     CURLOPT_SSL_VERIFYPEER => true
 ]);

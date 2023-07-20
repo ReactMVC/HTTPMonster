@@ -1,0 +1,17 @@
+{
+    "name": "darkphp/monster",
+    "description": "A simple PHP class for making HTTP requests using cURL",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Darkphp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hossein Pira",
+            "email": "h3dev.pira@gmail.com"
+        }
+    ]
+}

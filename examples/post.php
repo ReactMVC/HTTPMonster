@@ -14,16 +14,13 @@ $response = $http
             'Content-Type: application/x-www-form-urlencoded'
         )
     )
-    ->Body('email=user@gmail.com&password=123456')
-    ->Send();
-
-echo $response;
-
-$statusCode = $http->getStatus();
-echo "<br />Status Code: $statusCode\n";
+    ->Body('email=user@gmail.com&password=123456');
 
 try {
     $response = $http->Send();
+    $statusCode = $http->getStatus();
+    echo "<br />Status Code: $statusCode<br />";
+    echo $response;
 } catch (Exception $e) {
     echo '<br />Error: ' . $e->getMessage();
 }

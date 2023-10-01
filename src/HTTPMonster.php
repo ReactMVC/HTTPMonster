@@ -9,6 +9,7 @@ class HTTPMonster
 {
     private $ch;
     private $options = [];
+    public bool $json = false;
 
     /**
      * Constructor - initializes a new cURL handle and sets default options
@@ -104,6 +105,9 @@ class HTTPMonster
         $response = curl_exec($this->ch);
         if ($response === false) {
             throw new \Exception(curl_error($this->ch), curl_errno($this->ch));
+        }
+        if ($this->json) {
+            $response = json_decode($response, true);
         }
         return $response;
     }

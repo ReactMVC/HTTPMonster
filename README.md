@@ -34,6 +34,7 @@ $http->Headers([
     'Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXX'
 ]);
 $http->Body('{"foo": "bar"}');
+$http->json = true;
 $http->Timeout(30);
 ```
 
@@ -60,7 +61,11 @@ HTTPMonster add cURL options for the request. You can modify these defaults by c
 ```php
 $http->Option(CURLOPT_RETURNTRANSFER, true);
 ```
-
+### Decode json output
+By adding this line to your code you'll be able to get the result as a json decoded array:
+```php
+$http->json = true;
+```
 ### Chaining Methods
 
 HTTPMonster allows you to chain methods to make the code more readable:

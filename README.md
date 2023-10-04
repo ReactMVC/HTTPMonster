@@ -35,6 +35,7 @@ $http->Headers([
 ]);
 $http->Body('{"foo": "bar"}');
 $http->Timeout(30);
+echo $http->getBody();
 ```
 
 ### Sending the Request
